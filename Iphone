@@ -1,0 +1,76 @@
+Reprodutor Musical (MusicPlayer)
+Aparelho Telefônico (Phone)
+Navegador na Internet (InternetBrowser)
+Classes e Interfaces:
+Interface: MusicPlayer
+
+Métodos: playMusic(), pauseMusic(), stopMusic()
+Interface: Phone
+
+Métodos: makeCall(String number), receiveCall(), endCall()
+Interface: InternetBrowser
+
+Métodos: openPage(String url), refreshPage(), closePage()
+Classe: iPhone
+
+Implementa: MusicPlayer, Phone, InternetBrowser
+Atributos: modelo (String), numeroSerial (String)
+Métodos: playMusic(), pauseMusic(), stopMusic(), makeCall(String number), receiveCall(), endCall(), openPage(String url), refreshPage(), closePage()
+
+public class iPhone implements MusicPlayer, Phone, InternetBrowser {
+    private String modelo;
+    private String numeroSerial;
+
+    public iPhone(String modelo, String numeroSerial) {
+        this.modelo = modelo;
+        this.numeroSerial = numeroSerial;
+    }
+
+    // Implementação de MusicPlayer
+    @Override
+    public void playMusic() {
+        System.out.println("Reproduzindo música...");
+    }
+
+    @Override
+    public void pauseMusic() {
+        System.out.println("Música pausada.");
+    }
+
+    @Override
+    public void stopMusic() {
+        System.out.println("Música parada.");
+    }
+
+    // Implementação de Phone
+    @Override
+    public void makeCall(String number) {
+        System.out.println("Ligando para " + number + "...");
+    }
+
+    @Override
+    public void receiveCall() {
+        System.out.println("Recebendo chamada...");
+    }
+
+    @Override
+    public void endCall() {
+        System.out.println("Chamada encerrada.");
+    }
+
+    // Implementação de InternetBrowser
+    @Override
+    public void openPage(String url) {
+        System.out.println("Abrindo página: " + url);
+    }
+
+    @Override
+    public void refreshPage() {
+        System.out.println("Atualizando página...");
+    }
+
+    @Override
+    public void closePage() {
+        System.out.println("Página fechada.");
+    }
+}
